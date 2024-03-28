@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Overview of all teams</title>
+</head>
+<body>
+
+<h1>Overview of all teams</h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Place</th>
+        <th>State</th>
+    </tr>
+
+
+
+    <tr th:each="team : ${allTeams}">
+        <td th:text="${team.getNameTeam()}"></td>
+        <td th:text="${team.getCityOfTeam()}"></td>
+        <td th:text="${team.getStateOfTeam()}"></td>
+    </tr>
+</table>
+
+<p>
+    <a th:href="@{/team/new}">Add new team to list of teams</a>
+</p>
+
+</body>
+</html>

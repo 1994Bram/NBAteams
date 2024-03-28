@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Overview of all players</title>
+</head>
+<body>
+
+<h1>Overview of all players</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Birth year</th>
+        <th>Birthplace</th>
+    </tr>
+    <tr th:each="player : ${allPlayers}">
+        <td th:text="${player.getNamePlayer()}"></td>
+        <td th:text="${player.getBirthYear()}"></td>
+        <td th:text="${player.getBirthPlace()}"></td>
+    </tr>
+</table>
+
+<p>
+    <a th:href="@{/player/new}">Add new player to team</a>
+</p>
+
+</body>
+</html>
