@@ -14,6 +14,7 @@
             <td><label for="nameField">Name</label></td>
             <td><label for="birthYearField">Birth year</label></td>
             <td><label for="birthPlaceField">Birthplace</label></td>
+            <td><label for="teamField">Team</label></td>
         </tr>
         <tr>
             <td>
@@ -24,6 +25,9 @@
             </td>
             <td>
                 <input type="text" id="birthPlaceField" th:field="*{birthPlace}" />
+            </td>
+            <td>
+                <input type="text" id="teamField" th:field="*{team}" />
             </td>
         </tr>
     </table>

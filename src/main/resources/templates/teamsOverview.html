@@ -10,11 +10,9 @@
 <table>
     <tr>
         <th>Name</th>
-        <th>Place</th>
+        <th>City</th>
         <th>State</th>
     </tr>
-
-
 
     <tr th:each="team : ${allTeams}">
         <td th:text="${team.getNameTeam()}"></td>

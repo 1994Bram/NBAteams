@@ -11,13 +11,11 @@
 <table>
     <tr>
         <th>Name</th>
-        <th>Birth year</th>
-        <th>Birthplace</th>
+        <th>Team</th>
     </tr>
     <tr th:each="player : ${allPlayers}">
         <td th:text="${player.getNamePlayer()}"></td>
-        <td th:text="${player.getBirthYear()}"></td>
-        <td th:text="${player.getBirthPlace()}"></td>
+        <td th:text="${player.getTeam().getNameTeam()}"></td>
     </tr>
 </table>
 

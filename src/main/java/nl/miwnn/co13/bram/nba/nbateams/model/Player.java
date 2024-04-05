@@ -3,6 +3,7 @@ package nl.miwnn.co13.bram.nba.nbateams.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 /**
  * @author Bram van Ham
@@ -21,6 +22,9 @@ public class Player {
         this.birthYear = birthYear;
         this.birthPlace = birthPlace;
     }
+
+    @ManyToOne
+    private Team team;
 
     public Player() {
     }
@@ -47,5 +51,21 @@ public class Player {
 
     public void setBirthPlace(String birthPlace) {
         this.birthPlace = birthPlace;
+    }
+
+    public Long getPlayerId() {
+        return playerId;
+    }
+
+    public void setPlayerId(Long playerId) {
+        this.playerId = playerId;
+    }
+
+    public Team getTeam() {
+        return team;
+    }
+
+    public void setTeam(Team team) {
+        this.team = team;
     }
 }
